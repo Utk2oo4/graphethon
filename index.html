@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Microbe</div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Security ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Antivirus</a></li>
+                        <li><a href="#">Malware Protection</a></li>
+                        <li><a href="#">Ransomeware Detection</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Privacy ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Browser</a></li>
+                        <li><a href="#">IP Address</a></li>
+                        <li><a href="#">VPN</a></li>
+                        <li><a href="#">Identity Protection</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Performance</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="#">About Us</a>
+                <a href="#">Blogs ▼</a>
+                <a href="#">English 🌐</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <h1>MICROBE</h1>
+        <h2>Ransomeware Malware Detection Tool</h3>
+        <p id="intro-text"></p>
+        <!-- <button id="scan-btn" onclick="">Click here to Scan</button> -->
+    </div>
+    <br>
+    <br>
+    <div class="scanner">
+        <button id="scan-btn" onclick="">Click here to Scan</button>
+    </div>
+    <br>
+    <div class="container">
+        <div class="tabs">
+          <div class="tab active" onclick="setActiveTab('file')">FILE</div>
+          <div class="tab" onclick="setActiveTab('url')">URL</div>
+          <div class="tab" onclick="setActiveTab('search')">SEARCH</div>
+          <div class="tab" onclick="setActiveTab('api')"><span class="glow">⟨|⟩</span></div>
+        </div>
+        
+        <div class="content">
+          <!-- File Section -->
+          <div id="file-section" class="content-section active">
+            <div class="icon-container">
+              <div class="line"></div>
+              <div class="icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="25" y="20" width="50" height="60" stroke-width="2" />
+                  <path d="M25 35 L75 35" stroke-width="2" />
+                  <circle cx="50" cy="50" r="10" stroke-width="2" />
+                  <path d="M50 60 C40 65, 60 65, 50 60" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            
+            <div class="file-name" id="selected-file-name">No file selected</div>
+            
+            <input type="file" id="file-upload" class="file-input">
+            <label for="file-upload" class="button" id="choose-file-btn">Choose file</label>
+          </div>
+          
+          <!-- URL Section -->
+          <div id="url-section" class="content-section">
+            <div class="icon-container">
+              <div class="line"></div>
+              <div class="icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="40" stroke-width="2"/>
+                  <path d="M50 10 L50 90 M10 50 L90 50 M25 25 L75 75 M25 75 L75 25" stroke-width="2"/>
+                </svg>
+              </div>
+            </div>
+            
+            <div class="input-container">
+              <input type="text" class="input" placeholder="Search or scan a URL">
+            </div>
+            
+            <button class="button">Scan Now</button>
+          </div>
+          
+          <!-- Search Section -->
+          <div id="search-section" class="content-section">
+            <div class="icon-container">
+              <div class="line"></div>
+              <div class="icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="25" stroke-width="2" />
+                  <path d="M60 60 L85 85" stroke-width="4" />
+                </svg>
+              </div>
+            </div>
+            
+            <div class="input-container">
+              <input type="text" class="input" placeholder="Enter search term">
+            </div>
+            
+            <button class="button">Search</button>
+          </div>
+          
+          <!-- API Section -->
+          <div id="api-section" class="content-section">
+            <div class="icon-container">
+              <div class="line"></div>
+              <div class="icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M30 30 L50 50 L30 70" stroke-width="2" />
+                  <path d="M70 30 L50 50 L70 70" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            
+            <div class="input-container">
+              <input type="text" class="input" placeholder="Enter API key">
+            </div>
+            
+            <button class="button">Authenticate</button>
+          </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
